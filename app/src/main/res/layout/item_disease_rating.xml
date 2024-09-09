@@ -1,0 +1,24 @@
+<!-- res/layout/item_disease_rating.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Disease Name -->
+    <TextView
+        android:id="@+id/diseaseNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Disease Name" />
+
+    <!-- Rating Bar for the disease -->
+    <RatingBar
+        android:id="@+id/diseaseRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:rating="0" />
+</LinearLayout>
