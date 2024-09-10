@@ -32,7 +32,6 @@ class DiseaseRatingActivity: AppCompatActivity() {
         diseaseRecyclerView = findViewById(R.id.diseaseRecyclerView)
         submitAllRatingsButton = findViewById(R.id.submitAllRatingsButton)
 
-        // Create a list of diseases
         diseaseList = listOf(
             DiseaseRating("Nausea", 0f),
             DiseaseRating("Headache", 0f),
@@ -46,15 +45,12 @@ class DiseaseRatingActivity: AppCompatActivity() {
             DiseaseRating("Feeling Tired", 0f)
         )
 
-        // Set up RecyclerView with the adapter
         diseaseRecyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = DiseaseRatingAdapter(this, diseaseList)
         diseaseRecyclerView.adapter = adapter
 
-        // Initialize ViewModel
         viewModel = ViewModelProvider(this).get(HealthDataViewModel::class.java)
 
-        // Handle the submit button click
         submitAllRatingsButton.setOnClickListener {
             val ratingsSummary = diseaseList.joinToString("\n") {
                 "${it.diseaseName}: ${it.rating} stars"

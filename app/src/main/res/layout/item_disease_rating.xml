@@ -6,14 +6,12 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- Disease Name -->
     <TextView
         android:id="@+id/diseaseNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Disease Name" />
 
-    <!-- Rating Bar for the disease -->
     <RatingBar
         android:id="@+id/diseaseRatingBar"
         android:layout_width="wrap_content"

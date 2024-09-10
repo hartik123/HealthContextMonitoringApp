@@ -23,7 +23,6 @@ class DiseaseRatingAdapter(
         holder.diseaseNameTextView.text = diseaseRating.diseaseName
         holder.diseaseRatingBar.rating = diseaseRating.rating
 
-        // Update the rating when the user interacts with the RatingBar
         holder.diseaseRatingBar.setOnRatingBarChangeListener { _, rating, _ ->
             diseaseRating.rating = rating
         }

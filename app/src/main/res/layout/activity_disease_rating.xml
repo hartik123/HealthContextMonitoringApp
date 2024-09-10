@@ -5,14 +5,12 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <!-- RecyclerView for displaying the diseases and their ratings -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/diseaseRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
-    <!-- Button to submit the ratings -->
     <Button
         android:id="@+id/submitAllRatingsButton"
         android:layout_width="wrap_content"
