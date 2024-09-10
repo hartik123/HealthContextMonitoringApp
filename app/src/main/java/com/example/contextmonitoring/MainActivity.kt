@@ -68,7 +68,7 @@ class MainActivity : ComponentActivity() {
                 heartRate = withContext(Dispatchers.IO) {
                     heartRateCalculator(uri, contentResolver).toFloat()
                 }
-                heartRateTextView.text = "Heart Rate: $heartRate bpm"
+                heartRateTextView.text = "${heartRateTextView.text} $heartRate bpm"
             }
 
         }
@@ -80,7 +80,7 @@ class MainActivity : ComponentActivity() {
             val acceZ = readCSVFile(this, "CSVBreatheZ.csv")
 
              respiratoryRate = respiratoryRateCalculator(acceX, acceY, acceZ).toFloat()
-            respiratoryRateTextView.text = "Respiratory Rate: $respiratoryRate bpm"
+            respiratoryRateTextView.text = "${respiratoryRateTextView.text} $respiratoryRate bpm"
 
         }
 
