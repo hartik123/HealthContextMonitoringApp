@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var heartRateTextView: TextView
     private lateinit var respiratoryRateButton: Button
     private lateinit var respiratoryRateTextView: TextView
-    private lateinit var uploadSymtomsButton: Button
+    private lateinit var uploadSymptomsButton: Button
 
     private var heartRate: Float = 0f
     private var respiratoryRate: Float = 0f
@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
         heartRateTextView = findViewById(R.id.heartRateValue)
         respiratoryRateButton = findViewById(R.id.respiratoryRateSensor)
         respiratoryRateTextView = findViewById(R.id.respiratoryRateValue)
-        uploadSymtomsButton = findViewById(R.id.uploadSymtomsButton)
+        uploadSymptomsButton = findViewById(R.id.uploadSymptomsButton)
 
         calculateHeartRateButton.setOnClickListener{
             Log.d("CREATION", "on click happened")
@@ -84,7 +84,7 @@ class MainActivity : ComponentActivity() {
 
         }
 
-        uploadSymtomsButton.setOnClickListener {
+        uploadSymptomsButton.setOnClickListener {
             val intent = Intent(this, DiseaseRatingActivity::class.java)
             intent.putExtra("heartRate", heartRate)
             intent.putExtra("respiratoryRate", respiratoryRate)
