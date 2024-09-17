@@ -29,6 +29,77 @@ To develop a context-sensing application using the Health-Dev framework as outli
 
 9. **Testing and Deployment:** I would conduct unit tests for the Android app, followed by alpha and beta testing. Once everything is polished, I would make the application publicly available.
 
+Software:
+1. Android Studio and Android SDK: Android Studio is the primary Integrated Development Environment (IDE) used for developing the Health Context Monitoring App. It provides a rich environment for app development, debugging, and testing with built-in features such as layout editors, code analysis tools, and device emulators \cite{androidDevelopAndroid}.
+        \item Android SDK (Software Development Kit) with a minimum SDK level 29 is used for the app and it includes essential libraries, tools, and APIs that enable interaction with mobile device hardware, such as accelerometer sensors, camera sensors. These tools have allowed the app to gather data from sensors, manage background services, and handle user interfaces \cite{androidDevelopAndroid}.
+2. Emulator: The Android Emulator is used to simulate real-world devices for testing purposes. It allows developers to test the app on various Android configurations, screen sizes, and hardware features without needing physical devices. The emulator also supports sensor emulation for testing sensor-driven functionalities like heart rate and respiratory rate calculations \cite{androidDevelopAndroid}.
+3. Kotlin Programming Language: The app is developed using Kotlin, a modern, concise, and statically typed programming language designed for Android development. Kotlin simplifies app development with its powerful features like null safety, coroutines for asynchronous programming, and better code readability compared to Java \cite{androidDevelopAndroid}.
+
+Kotlin is integrated with Android Studio, making it easier to implement UI components, access device sensors, and manage local databases such as RoomDB.
+
+Hartdware:
+Android emulator(Medium Phone API 35): It is a virtual device configuration that simulates an Android phone running API Level 35. The "Medium Phone" designation means it is a standard-sized smartphone with typical hardware configurations like a mid-range screen size, resolution, and processing power. This emulator has allowed to test the Context Monitoring Application quickly on different mobile configurations having different android versions.
+
+**Heart Rate Calculator Algorithm:**
+
+  Step 1: Initialize retriever and extract frames
+Initialize MediaMetadataRetriever
+Load video from URI
+Extract total number of frames
+
+  Step 2: Extract every 50th frame
+For each frame at regular intervals (e.g., 50):
+    Extract the frame
+    Store the frame if not null
+
+  Step 3: Calculate pixel intensity
+For each stored frame:
+    Select a 100x100 pixel region (e.g., from (350, 350) to (450, 450))
+    Sum the red, green, and blue values of the pixels in the region
+    Store the average pixel intensity for each frame
+
+  Step 4: Smooth the data
+For each set of 5 consecutive pixel intensities:
+    Compute the average and store the smoothed value
+
+  Step 5: Count peaks
+Set count = 0
+For each smoothed intensity:
+    If the difference between consecutive intensities > threshold (e.g., 3500):
+        Increment count
+
+  Step 6: Calculate heart rate
+Heart rate = (count * 60) / 4
+
+**Respiratory Rate Calculator Algorithm:**
+
+  Step 1: Inputs
+Three lists of acceleration values: accelValuesX, accelValuesY, and accelValuesZ (representing acceleration on the X, Y, and Z axes, respectively).
+
+  Step 2: Initialize variables:
+Set previousValue to 10.0 (initial reference value for the first comparison).
+Initialize a counter k to 0 (this will count significant changes in acceleration).
+
+  Step 3: Loop through the acceleration data starting from index 11:
+For each index i from 11 to the end of the list:
+    Calculate the Euclidean distance for the acceleration at index i:
+    $$
+    currentValue = \sqrt{accelValuesX[i]^2 + accelValuesY[i]^2 + accelValuesZ[i]^2}
+    $$
+
+    Compare the absolute difference between previousValue and currentValue:
+    f the difference exceeds 0.15, increment the counter k.
+    if ∣previousValue−currentValue∣>0.15, then increment k
+    Update previousValue to be the currentValue for the next iteration.
+
+  Step 4: Calculate the respiratory rate after the loop finishes:
+  $$
+  Rate = \frac{k}{45.0}*30
+  $$
+  
+  Step 5: Return the calculated rate as an integer value.
+
+
 **Q2.
 In Project 1 you have stored the user’s symptoms data in the local server. Using the bHealthy application suite how can you provide feedback to the user and develop a novel application to improve context sensing and use that to generate the model of the user?**
 
