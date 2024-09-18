@@ -1,10 +1,18 @@
-# Health Context Monitoring
+# Health Context Monitoring Screens
 
 Heart Rate & Respiratory Rate Screen          |  Symtoms Rating Screen
 :-------------------------:|:-------------------------:
 ![HealthMonitoringAppScreen1](https://github.com/user-attachments/assets/814405d0-290b-4fc3-a9d1-490d3ed4eb9a)  |  ![HealthMonitoringAppScreen2](https://github.com/user-attachments/assets/0fec3740-4a32-4218-9dec-61526daee9fd)
 
+# Health Context Monitoring App Video
 
+[ContextMonitoringApp.webm](https://github.com/user-attachments/assets/0dce90aa-6279-421c-a8ef-0290bacaca75)
+
+# YouTube Project Explanation link
+
+[Project Explanation](https://www.youtube.com/watch?v=jlxLjx8e2wY&ab_channel=HartikSuhagiya)
+
+# Question \& Answers
 **Q1. 
 Imagine you are new to the programming world and not proficient enough in coding. But, you have a brilliant idea where you want to develop a context-sensing application like Project 1.  You come across the Heath-Dev paper and want it to build your application. Specify what Specifications you should provide to the Health-Dev framework to develop the code ideally.**
 
