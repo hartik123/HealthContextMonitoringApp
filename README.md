@@ -2,7 +2,7 @@
 
 Heart Rate & Respiratory Rate Screen          |  Symtoms Rating Screen
 :-------------------------:|:-------------------------:
-![HealthMonitoringAppScreen1](https://github.com/user-attachments/assets/49423d8c-8c32-4753-83bf-af23120e7f1b)  |  ![HealthMonitoringAppScreen2](https://github.com/user-attachments/assets/6157880c-ac72-4e2e-adb4-7863c945e08c)
+![HealthMonitoringAppScreen1](https://github.com/user-attachments/assets/0fec3740-4a32-4218-9dec-61526daee9fd)  |  ![HealthMonitoringAppScreen2](https://github.com/user-attachments/assets/814405d0-290b-4fc3-a9d1-490d3ed4eb9a)
 
 
 **Q1. 
