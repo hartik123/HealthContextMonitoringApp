@@ -19,25 +19,25 @@ Imagine you are new to the programming world and not proficient enough in coding
 **Answer:**
 To develop a context-sensing application using the Health-Dev framework as outlined in the paper, I would begin by gathering detailed specifications. After defining these specifications, I would focus on the implementation—translating those specifications into code.
 
-1. **Define the Purpose and Context of the App:** First, I would clearly define the focus of the health-related application, such as health monitoring, fitness tracking, or environmental sensing. Then, I would finalize the contextual information that the app will collect, such as heart rate, respiratory rate, user location, sleep patterns, and movement.
+1. Define the Purpose and Context of the App: First, I would clearly define the focus of the health-related application, such as health monitoring, fitness tracking, or environmental sensing. Then, I would finalize the contextual information that the app will collect, such as heart rate, respiratory rate, user location, sleep patterns, and movement.
 
-2. **Decide on Sensors and Data Requirements:** I would identify the necessary sensors to collect the health data (e.g., sensors for calculating heart rate or respiratory rate). For example, the application might use accelerometers, gyroscopes, heart rate sensors, GPS, or environmental sensors.
+2. Decide on Sensors and Data Requirements: I would identify the necessary sensors to collect the health data (e.g., sensors for calculating heart rate or respiratory rate). For example, the application might use accelerometers, gyroscopes, heart rate sensors, GPS, or environmental sensors.
 
-3. **Choose Platforms and Device Compatibility:** I would decide which operating system the app will support—iOS or Android. Additionally, I would consider whether the app can be integrated into other smart devices, such as smartwatches or fitness trackers.
+3. Choose Platforms and Device Compatibility: I would decide which operating system the app will support—iOS or Android. Additionally, I would consider whether the app can be integrated into other smart devices, such as smartwatches or fitness trackers.
 
-4. **User Interaction:** I would determine high-level requirements for the UI/UX. Should the application display real-time health data, or provide feedback on the user’s activity? I would also decide how to notify users—whether through pop-ups, notifications, or vibrations.
+4. User Interaction: I would determine high-level requirements for the UI/UX. Should the application display real-time health data, or provide feedback on the user’s activity? I would also decide how to notify users—whether through pop-ups, notifications, or vibrations.
 
-5. **Development:** After learning the basics of Android development in Kotlin, I would begin implementing the features of the app step by step. This would involve coding the functionality I planned during the specification stage.
+5. Development: After learning the basics of Android development in Kotlin, I would begin implementing the features of the app step by step. This would involve coding the functionality I planned during the specification stage.
 
-6. **Data Privacy and Security:** I would ensure the app complies with HIPAA policies by securely storing all health data in an encrypted format. Data privacy and secure handling would be a priority.
+6. Data Privacy and Security: I would ensure the app complies with HIPAA policies by securely storing all health data in an encrypted format. Data privacy and secure handling would be a priority.
 
-7. **Health-Dev Framework Components:** I would use the Health-Dev framework for sensor data aggregation and compatibility. Then, I would analyze the data and present meaningful results to users through the app’s user interface. I would also consider energy efficiency, especially since processing sensor data can affect battery life, and work to optimize power usage.
+7. Health-Dev Framework Components: I would use the Health-Dev framework for sensor data aggregation and compatibility. Then, I would analyze the data and present meaningful results to users through the app’s user interface. I would also consider energy efficiency, especially since processing sensor data can affect battery life, and work to optimize power usage.
 
-8. **Performance and Scalability:** I would measure the app’s performance by recording metrics such as data processing speed, accuracy of sensor data collection, and screen responsiveness. Additionally, I would test the app's scalability—how many users or devices it can support simultaneously.
+8. Performance and Scalability: I would measure the app’s performance by recording metrics such as data processing speed, accuracy of sensor data collection, and screen responsiveness. Additionally, I would test the app's scalability—how many users or devices it can support simultaneously.
 
-9. **Testing and Deployment:** I would conduct unit tests for the Android app, followed by alpha and beta testing. Once everything is polished, I would make the application publicly available.
+9. Testing and Deployment: I would conduct unit tests for the Android app, followed by alpha and beta testing. Once everything is polished, I would make the application publicly available.
 
-Software:
+**Software**:
 1. Android Studio and Android SDK: Android Studio is the primary Integrated Development Environment (IDE) used for developing the Health Context Monitoring App. It provides a rich environment for app development, debugging, and testing with built-in features such as layout editors, code analysis tools, and device emulators.
 Android SDK (Software Development Kit) with a minimum SDK level 29 is used for the app and it includes essential libraries, tools, and APIs that enable interaction with mobile device hardware, such as accelerometer sensors, camera sensors. These tools have allowed the app to gather data from sensors, manage background services, and handle user interfaces.
 2. Emulator: The Android Emulator is used to simulate real-world devices for testing purposes. It allows developers to test the app on various Android configurations, screen sizes, and hardware features without needing physical devices. The emulator also supports sensor emulation for testing sensor-driven functionalities like heart rate and respiratory rate calculations.
@@ -45,9 +45,11 @@ Android SDK (Software Development Kit) with a minimum SDK level 29 is used for t
 
 Kotlin is integrated with Android Studio, making it easier to implement UI components, access device sensors, and manage local databases such as RoomDB.
 
-Hartdware:
+**Hardware**:
 
 Android emulator(Medium Phone API 35): It is a virtual device configuration that simulates an Android phone running API Level 35. The "Medium Phone" designation means it is a standard-sized smartphone with typical hardware configurations like a mid-range screen size, resolution, and processing power. This emulator has allowed to test the Context Monitoring Application quickly on different mobile configurations having different android versions.
+
+**Algorithms**
 
 **Heart Rate Calculator Algorithm:**
 
