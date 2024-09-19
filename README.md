@@ -13,8 +13,8 @@ Heart Rate & Respiratory Rate Screen          |  Symtoms Rating Screen
 [Project Explanation](https://www.youtube.com/watch?v=jlxLjx8e2wY&ab_channel=HartikSuhagiya)
 
 # Question \& Answers
-**Q1. 
-Imagine you are new to the programming world and not proficient enough in coding. But, you have a brilliant idea where you want to develop a context-sensing application like Project 1.  You come across the Heath-Dev paper and want it to build your application. Specify what Specifications you should provide to the Health-Dev framework to develop the code ideally.**
+## Q1. 
+### Imagine you are new to the programming world and not proficient enough in coding. But, you have a brilliant idea where you want to develop a context-sensing application like Project 1.  You come across the Heath-Dev paper and want it to build your application. Specify what Specifications you should provide to the Health-Dev framework to develop the code ideally.
 
 **Answer:**
 To develop a context-sensing application using the Health-Dev framework as outlined in the paper, I would begin by gathering detailed specifications. After defining these specifications, I would focus on the implementation—translating those specifications into code.
@@ -41,9 +41,8 @@ To develop a context-sensing application using the Health-Dev framework as outli
 1. Android Studio and Android SDK: Android Studio is the primary Integrated Development Environment (IDE) used for developing the Health Context Monitoring App. It provides a rich environment for app development, debugging, and testing with built-in features such as layout editors, code analysis tools, and device emulators.
 Android SDK (Software Development Kit) with a minimum SDK level 29 is used for the app and it includes essential libraries, tools, and APIs that enable interaction with mobile device hardware, such as accelerometer sensors, camera sensors. These tools have allowed the app to gather data from sensors, manage background services, and handle user interfaces.
 2. Emulator: The Android Emulator is used to simulate real-world devices for testing purposes. It allows developers to test the app on various Android configurations, screen sizes, and hardware features without needing physical devices. The emulator also supports sensor emulation for testing sensor-driven functionalities like heart rate and respiratory rate calculations.
-3. Kotlin Programming Language: The app is developed using Kotlin, a modern, concise, and statically typed programming language designed for Android development. Kotlin simplifies app development with its powerful features like null safety, coroutines for asynchronous programming, and better code readability compared to Java.
-
-Kotlin is integrated with Android Studio, making it easier to implement UI components, access device sensors, and manage local databases such as RoomDB.
+3. Kotlin Programming Language: The app is developed using Kotlin, a modern, concise, and statically typed programming language designed for Android development. Kotlin simplifies app development with its powerful features like null safety, coroutines for asynchronous programming, and better code readability compared to Java. Kotlin is integrated with Android Studio, making it easier to implement UI components, access device sensors, and manage local databases such as RoomDB.
+4. RoomDB: RoomDB an abstraction layer over SQLite in Android, provides an easy-to-use interface for database access. It has been used in this project to write health data entity, Data Access objects (DAO), and a Health Data View Model. It seamlessly integrated with this application and helps in storing the health data such as Heart rate, Respiratory rate and all the 12 symptoms data.
 
 **Hardware**:
 
@@ -54,41 +53,61 @@ Android emulator(Medium Phone API 35): It is a virtual device configuration that
 **Heart Rate Calculator Algorithm:**
 
   Step 1: Initialize retriever and extract frames
+  
 Initialize MediaMetadataRetriever
+
 Load video from URI
+
 Extract total number of frames
 
   Step 2: Extract every 50th frame
-For each frame at regular intervals (e.g., 50):
-    Extract the frame
-    Store the frame if not null
+  
+For each frame at regular intervals (50):
+
+Extract the frame
+    
+Store the frame if not null
 
   Step 3: Calculate pixel intensity
+  
 For each stored frame:
-    Select a 100x100 pixel region (e.g., from (350, 350) to (450, 450))
-    Sum the red, green, and blue values of the pixels in the region
-    Store the average pixel intensity for each frame
+
+Select a 100x100 pixel region (e.g., from (350, 350) to (450, 450))
+    
+Sum the red, green, and blue values of the pixels in the region
+    
+Store the average pixel intensity for each frame
 
   Step 4: Smooth the data
+  
 For each set of 5 consecutive pixel intensities:
-    Compute the average and store the smoothed value
+
+Compute the average and store the smoothed value
 
   Step 5: Count peaks
+  
 Set count = 0
+
 For each smoothed intensity:
-    If the difference between consecutive intensities > threshold (e.g., 3500):
-        Increment count
+
+If the difference between consecutive intensities > threshold (e.g., 3500):
+    
+Increment count
 
   Step 6: Calculate heart rate
+  
 Heart rate = (count * 60) / 4
 
 **Respiratory Rate Calculator Algorithm:**
 
   Step 1: Inputs
+  
 Three lists of acceleration values: accelValuesX, accelValuesY, and accelValuesZ (representing acceleration on the X, Y, and Z axes, respectively).
 
   Step 2: Initialize variables:
+  
 Set previousValue to 10.0 (initial reference value for the first comparison).
+
 Initialize a counter k to 0 (this will count significant changes in acceleration).
 
   Step 3: Loop through the acceleration data starting from index 11:
@@ -101,7 +120,7 @@ $$currentValue = \sqrt{accelValuesX[i]^2 + accelValuesY[i]^2 + accelValuesZ[i]^2
 
 Compare the absolute difference between previousValue and currentValue:
     
-f the difference exceeds 0.15, increment the counter k.
+If the difference exceeds 0.15, increment the counter k.
     
 if ∣previousValue−currentValue∣>0.15, then increment k
     
@@ -114,8 +133,8 @@ $$Rate = \frac{k}{45.0}*30$$
   Step 5: Return the calculated rate as an integer value.
 
 
-**Q2.
-In Project 1 you have stored the user’s symptoms data in the local server. Using the bHealthy application suite how can you provide feedback to the user and develop a novel application to improve context sensing and use that to generate the model of the user?**
+## Q2.
+### In Project 1 you have stored the user’s symptoms data in the local server. Using the bHealthy application suite how can you provide feedback to the user and develop a novel application to improve context sensing and use that to generate the model of the user?
 
 **Answer:**
 To develop a novel context-sensing application using the bHealthy application suite, while enhancing user feedback and generating a user model, I would follow these steps:
@@ -132,8 +151,8 @@ To develop a novel context-sensing application using the bHealthy application su
 
 6. **Collect User Feedback:** I would incorporate user feedback to continually improve the app’s features, such as refining health suggestions, optimizing battery usage, and enhancing overall health monitoring accuracy.
 
-**Q3.
-A common assumption is mobile computing is mostly about app development. After completing Project 1 and reading both papers, have your views changed? If yes, what do you think mobile computing is about and why? If no, please explain why you still think mobile computing is mostly about app development, providing examples to support your viewpoint**
+## Q3.
+### A common assumption is mobile computing is mostly about app development. After completing Project 1 and reading both papers, have your views changed? If yes, what do you think mobile computing is about and why? If no, please explain why you still think mobile computing is mostly about app development, providing examples to support your viewpoint**
 
 **Answer:**
 Yes, my views on mobile computing have changed after completing Project 1 and reading both papers. Initially, I assumed mobile computing was primarily about app development, but now I see that it encompasses much more. Mobile computing is about integrating diverse systems—such as sensors, data processing, machine learning, and cloud services—into cohesive, real-time solutions. It involves not just developing user interfaces, but also handling sensor data collection, context awareness, energy efficiency, and optimizing performance. For instance, in Project 1, gathering health metrics like heart rate and respiratory rate, storing the data locally in RoomDB, and providing meaningful feedback required much more than just building an app. It involved managing complex data streams, ensuring privacy, and leveraging predictive analytics for personalized feedback. This shows that mobile computing is about creating intelligent, adaptive systems rather than just standalone applications.
