@@ -6,11 +6,15 @@ Heart Rate & Respiratory Rate Screen          |  Symtoms Rating Screen
 
 # Health Context Monitoring App Video
 
-[ContextMonitoringApp.webm](https://github.com/user-attachments/assets/0dce90aa-6279-421c-a8ef-0290bacaca75)
+[ContextMonitoringApp.webm](https://github.com/user-attachments/assets/0dce90aa-6279-421c-a8ef-0290bacaca75) 
+
+# Blood Flow Video through the Finger
+
+[![Heart Rate Calulation Sample Video](https://i9.ytimg.com/vi/163zLFpQl_I/mq2.jpg?sqp=CLyj38gG-oaymwEoCMACELQB8quKqQMcGADwAQH4Ac4FgAKACooCDAgAEAEYfyAeKBMwDw==&rs=AOn4CLD7mMebJ7V48HodYeLPTEqTNlF5JQ)](https://www.youtube.com/watch?v=163zLFpQl_I)
 
 # YouTube Project Explanation link
 
-[Project Explanation](https://www.youtube.com/watch?v=jlxLjx8e2wY&ab_channel=HartikSuhagiya)
+[Project Explanation](https://www.youtube.com/watch?v=jlxLjx8e2wY&ab_channel=HartikSuhagiya) 
 
 # Question \& Answers
 ## Q1. 
